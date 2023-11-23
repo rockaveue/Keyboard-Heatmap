@@ -29,8 +29,13 @@ html{height:100%}body{height:100%;overflow:auto;font-family:Helvetica,Arial,Sans
             }
             #presample {
                 font-weight:bold;
-                padding:20px 15px 5px 5px;
+                padding:20px 15px 20px 5px;
                 vertical-align:middle;
+            }
+            #presample > ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
             }
             #footer {
                 margin-top:10px;
@@ -111,4 +116,3 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#fabc3f, endCol
             .button:hover {
                     background: #fab505;
              }
-

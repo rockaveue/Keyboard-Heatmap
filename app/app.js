@@ -67,6 +67,7 @@
       config.gradient = cfg.gradient;
 
     app.coordinates = app.LAYOUTS[cfg.layout || "QWERTY"];
+    app.layout = cfg.layout || "QWERTY";
 
     var heatmap = h337.create(config);
     app.heatmap = heatmap;
@@ -121,7 +122,7 @@
   for(var i=0; i < items.length; i++){
     (function(i){
       items[i].onclick = function(){
-        typeField.value = app.SAMPLE_TEXT[i];
+        typeField.value = app.layout == 'CYRILLIC_MONGOLIAN' ? app.SAMPLE_TEXT_MN[i] : app.SAMPLE_TEXT[i];
         repaintAll();
       };
     })(i);
